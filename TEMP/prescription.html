@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Prescription Form</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #recommendations {
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#currentDate").datepicker({ dateFormat: 'yy-mm-dd' }).datepicker("setDate", new Date());
+            $("#fromDate").datepicker({ dateFormat: 'yy-mm-dd' });
+            $("#toDate").datepicker({ dateFormat: 'yy-mm-dd' });
+            $("#nextAppointment").datepicker({ dateFormat: 'yy-mm-dd' });
+        });
+    </script>
+</head>
+<body>
+    <h2>Doctor Prescription Form</h2>
+    <form action="#" method="POST">
+        <label for="currentDate">Date:</label>
+        <input type="text" id="currentDate" name="currentDate" readonly><br><br>
+
+        <label for="patientID">Patient's ID:</label>
+        <input type="text" id="patientID" name="patientID" required><br><br>
+
+        <label for="numMedicines">Number of Medicines:</label>
+        <select id="numMedicines" name="numMedicines" onchange="createMedicineFields()" required>
+            <option value="">Select</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select><br><br>
+
+        <div id="medicineFields"></div>
+
+        <label for="numDays">Number of days (of Consumption of medicines):</label>
+        <input type="text" id="numDays" name="numDays" required><br><br>
+
+        <label for="fromDate">From:</label>
+        <input type="text" id="fromDate" name="fromDate" required>
+        <label for="toDate">To:</label>
+        <input type="text" id="toDate" name="toDate" required><br><br>
+
+        <label for="nextAppointment">Next appointment to be scheduled on:</label>
+        <input type="text" id="nextAppointment" name="nextAppointment" required><br><br>
+
+        <label for="recommendations">Any precautions or other recommendations from the doctor:</label><br>
+        <textarea id="recommendations" name="recommendations" placeholder="Enter recommendations"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function createMedicineFields() {
+            var numMedicines = document.getElementById("numMedicines").value;
+            var medicineFieldsDiv = document.getElementById("medicineFields");
+            medicineFieldsDiv.innerHTML = "";
+
+            for (var i = 1; i <= numMedicines; i++) {
+                var medicineNameLabel = document.createElement("label");
+                medicineNameLabel.innerHTML = "Medicine Name " + i + ": ";
+                var medicineNameInput = document.createElement("input");
+                medicineNameInput.setAttribute("type", "text");
+                medicineNameInput.setAttribute("name", "medicineName" + i);
+                medicineFieldsDiv.appendChild(medicineNameLabel);
+                medicineFieldsDiv.appendChild(medicineNameInput);
+                medicineFieldsDiv.appendChild(document.createElement("br"));
+
+                var foodLabel = document.createElement("label");
+                foodLabel.innerHTML = "Timing: ";
+                var foodSelect = document.createElement("select");
+                foodSelect.setAttribute("name", "food" + i);
+                var beforeFoodOption = document.createElement("option");
+                beforeFoodOption.setAttribute("value", "before");
+                beforeFoodOption.innerHTML = "Before Food";
+                var afterFoodOption = document.createElement("option");
+                afterFoodOption.setAttribute("value", "after");
+                afterFoodOption.innerHTML = "After Food";
+                foodSelect.appendChild(beforeFoodOption);
+                foodSelect.appendChild(afterFoodOption);
+                medicineFieldsDiv.appendChild(foodLabel);
+                medicineFieldsDiv.appendChild(foodSelect);
+                medicineFieldsDiv.appendChild(document.createElement("br"));
+
+                var timingLabel = document.createElement("label");
+                timingLabel.innerHTML = "Slots: ";
+                var morningCheckbox = document.createElement("input");
+                morningCheckbox.setAttribute("type", "checkbox");
+                morningCheckbox.setAttribute("name", "morning" + i);
+                morningCheckbox.setAttribute("value", "Morning");
+                morningCheckbox.innerHTML = "Morning";
+                var eveningCheckbox = document.createElement("input");
+                eveningCheckbox.setAttribute("type", "checkbox");
+                eveningCheckbox.setAttribute("name", "evening" + i);
+                eveningCheckbox.setAttribute("value", "Evening");
+                eveningCheckbox.innerHTML = "Evening";
+                var nightCheckbox = document.createElement("input");
+                nightCheckbox.setAttribute("type", "checkbox");
+                nightCheckbox.setAttribute("name", "night" + i);
+                nightCheckbox.setAttribute("value", "Night");
+                nightCheckbox.innerHTML = "Night";
+                medicineFieldsDiv.appendChild(timingLabel);
+                medicineFieldsDiv.appendChild(morningCheckbox);
+                medicineFieldsDiv.appendChild(document.createTextNode("Morning"));
+                medicineFieldsDiv.appendChild(eveningCheckbox);
+                medicineFieldsDiv.appendChild(document.createTextNode("Evening"));
+                medicineFieldsDiv.appendChild(nightCheckbox);
+                medicineFieldsDiv.appendChild(document.createTextNode("Night"));
+                medicineFieldsDiv.appendChild(document.createElement("br"));
+            }
+        }
+    </script>
+</body>
+</html>

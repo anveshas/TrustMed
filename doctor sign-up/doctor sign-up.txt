@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Sign-Up</title>
+    <link rel="stylesheet" href="styles.css">
+
+	<style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+}
+
+.background {
+    background-image: url("write.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px); /* Apply blur effect */
+}
+
+.blur-overlay {
+    background-color: rgba(255, 255, 255, 0.7); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    position: relative; 
+    z-index: 1;
+}
+
+h2 {
+    text-align: center;
+    color: #333333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+	</style>
+</head>
+<body>
+	<body background="C:\Users\Sreya\AppData\Local\Temp\ef1ea542-9a78-47e7-b2eb-9bbf3587c8a5_Hackathon.zip.8a5\Hackathon\write.jpg">
+    <div class="signup-container">
+        <h2>Doctor Sign-Up</h2>
+        <form id="signup-form" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Set Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile" required>
+            </div>
+
+	     <div class="form-group">
+                <label for="mobile">Field Of Expertise:</label>
+                <input type="text" id="expertise" name="expertise" required>
+            </div>
+
+	      <div class="form-group">
+                <label for="mobile">UID Number by NMC :</label>
+                <input type="text" id="UID" name="UID" required>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
