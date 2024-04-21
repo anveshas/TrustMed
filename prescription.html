@@ -232,11 +232,11 @@
 				<div class="bread-inner">
 					<div class="row">
 						<div class="col-12">
-							<h2>Patient Log-in</h2>
+							<h2>Doctor's Prescription</h2>
 							<ul class="bread-list">
 								<li><a href="index.html">Home</a></li>
 								<li><i class="icofont-simple-right"></i></li>
-								<li class="active">Patient Log-in</li>
+								<li class="active">Doctor's Prescription</li>
 							</ul>
 						</div>
 					</div>
@@ -256,7 +256,7 @@
                             <h2>Doctor Prescription Form</h2>
     <form action="#" method="POST">
         <label for="currentDate">Date:</label>
-        <input type="text" id="currentDate" name="currentDate" readonly><br><br>
+        <input type="date" id="currentDate" name="currentDate" required><br><br>
 
         <label for="patientID">Patient's ID:</label>
         <input type="text" id="patientID" name="patientID" required><br><br>
@@ -282,18 +282,18 @@
         <input type="text" id="numDays" name="numDays" required><br><br>
 
         <label for="fromDate">From:</label>
-        <input type="text" id="fromDate" name="fromDate" required>
+        <input type="date" id="fromDate" name="fromDate" required>
         <label for="toDate">To:</label>
-        <input type="text" id="toDate" name="toDate" required><br><br>
+        <input type="date" id="toDate" name="toDate" required><br><br>
 
         <label for="nextAppointment">Next appointment to be scheduled on:</label>
-        <input type="text" id="nextAppointment" name="nextAppointment" required><br><br>
+        <input type="date" id="nextAppointment" name="nextAppointment" required><br><br>
 
         <label for="recommendations">Any precautions or other recommendations from the doctor:</label><br>
         <textarea id="recommendations" name="recommendations" placeholder="Enter recommendations"></textarea><br><br>
         <div class="col-12">
             <div class="form-group login-btn">
-                <button class="btn" type="submit" onclick="doLogin();">Submit</button>
+                <button class="btn" type="submit" onclick="doLogin()">Submit</button>
             </div>
         </div>
     </form>

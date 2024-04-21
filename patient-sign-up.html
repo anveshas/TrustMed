@@ -43,6 +43,11 @@
         <link rel="stylesheet" href="css/responsive.css">
 		
     </head>
+	<script>
+		function doLogin(){
+			alert("Patient's Account Successfully Created.");
+		}
+	</script>
     <body>
 	
 		<!-- Preloader -->
@@ -190,7 +195,7 @@
                         <div class="contact-us-form">
                             <h2>Patient Sign-Up</h2>
                             <p>Enter your details and kindly fill the form.</p>
-                            <form class="form" method="post" action="mail/mail.php">
+                            <form class="form" method="post" action="index.html">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -219,7 +224,7 @@
 									</div>
                                     <div class="col-12">
                                         <div class="form-group login-btn">
-                                            <button class="btn" type="submit">Signup</button>
+                                            <button class="btn" type="submit"  onclick="doLogin()">Signup</button>
                                         </div>
                                     </div>
                                 </div>
