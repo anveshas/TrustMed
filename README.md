@@ -19,6 +19,6 @@ Initiated a project to authenticate prescriptions for online medicine purchases,
 2. **Open terminal**
    ```bash
    cd TrustMed
-
-### License
-Feel free to customize the sections according to the specific details and technologies used in your project. This structure provides a clear and concise overview of your project, its impact, and how to set it up for potential users or contributors.
+3. **Set up the database:**
+4. **Run the application:**
+   Run the application using Live Server
