@@ -19,6 +19,6 @@ Initiated a project to authenticate prescriptions for online medicine purchases,
 2. **Open terminal**
    ```bash
    cd TrustMed
-3. **Set up the database:** (MYSql)
+3. **Set up the database:** (MySQL)
 4. **Run the application:** using Live Server
 
