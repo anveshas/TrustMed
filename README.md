@@ -1,4 +1,4 @@
-## Project: TrustMed
+## Project: TrustMed: Where Trust Meets Medication
 
 ### Overview
 Initiated a project to authenticate prescriptions for online medicine purchases, thereby reducing the distribution of illicit and potent medications in the online marketplace.
