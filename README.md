@@ -6,7 +6,7 @@ Initiated a project to authenticate prescriptions for online medicine purchases,
 ### Features
 - **Prescription Authentication:** Developed a system to verify the authenticity of medical prescriptions for online medicine purchases.
 - **Impact:** Reduced the distribution of illicit and potent medications in the online marketplace.
-- **Database Development:** Created a MySQL database to store information from over 500 medical prescriptions and medications, streamlining data management processes.
+- **Database Development:** Created a MySQL database to store information from over 150 medical prescriptions and medications, streamlining data management processes.
 
 ### Technologies Used
 - **Database:** MySQL
